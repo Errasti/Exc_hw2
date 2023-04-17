@@ -1,10 +1,12 @@
 package org.example;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        //float result  = resendNumber();
-        //System.out.println(result);
+        float result  = resendNumber();
+        System.out.println(result);
+        System.out.println();
         reworkedCode();
     }
 
@@ -26,9 +28,13 @@ public class Main {
         return result;
     }
 
+    /**
+     * Исправленный кусок кода из второй задачи
+     */
     public static void reworkedCode(){
+        Random random = new Random();
         try {
-            int d = 0;
+            int d = random.nextInt(4); // иначе 100% ловили ошибку
             int number = 10; // вместо intArray[8]
             double catchedRes1 = number / d;
             System.out.println("catchedRes1 = " + catchedRes1);
